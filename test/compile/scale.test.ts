@@ -101,10 +101,11 @@ describe('Scale', function() {
 
           assert.deepEqual(domain, {
             data: SOURCE,
-            field: [
-              'bin_origin_start',
-              'bin_origin_end'
-            ]
+            field: 'bin_origin_range',
+            sort: {
+              field: 'bin_origin_start',
+              op: 'min'
+            }
           });
         });
 
